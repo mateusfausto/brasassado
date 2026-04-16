@@ -4,12 +4,6 @@
   "devCommand": "next dev",
   "installCommand": "npm install",
   "regions": ["gru1"],
-  "env": {
-    "DATABASE_URL": "@database_url",
-    "NEXT_PUBLIC_ADSENSE_CLIENT": "@adsense_client",
-    "SEED_SECRET": "@seed_secret",
-    "NEXT_PUBLIC_SITE_URL": "@site_url"
-  },
   "functions": {
     "app/api/seed/route.ts": {
       "maxDuration": 60
