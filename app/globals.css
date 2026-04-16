@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-ui: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --color-ember-500: #ff6b1a;
+  --color-ember-600: #f04f0a;
+  --color-smoke-800: #574a42;
+  --color-coal: #1a1208;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-ui);
+  background-color: #faf8f5;
+  color: #2d1f12;
+  line-height: 1.7;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  color: #1a1208;
+}
+
+/* Headings em seções escuras herdam cor do pai */
+.bg-\[\#1a1208\] h1,
+.bg-\[\#1a1208\] h2,
+.bg-\[\#1a1208\] h3 {
+  color: inherit;
+}
+
+/* ── Prose Article Content ── */
+.prose-churrasco {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: #2d1f12;
+  max-width: 72ch;
+}
+
+.prose-churrasco h1 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #1a1208;
+}
+.prose-churrasco h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1208;
+  border-bottom: 2px solid #ff6b1a;
+  padding-bottom: 0.5rem;
+}
+.prose-churrasco h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #7d3810;
+}
+.prose-churrasco p {
+  margin-bottom: 1.25rem;
+}
+.prose-churrasco ul, .prose-churrasco ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.prose-churrasco li {
+  margin-bottom: 0.5rem;
+}
+.prose-churrasco blockquote {
+  border-left: 4px solid #ff6b1a;
+  padding: 1rem 1.5rem;
+  background: #fff3ec;
+  border-radius: 0 8px 8px 0;
+  margin: 2rem 0;
+  font-style: italic;
+}
+.prose-churrasco strong {
+  font-weight: 700;
+  color: #1a1208;
+}
+.prose-churrasco table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+.prose-churrasco th {
+  background: #ff6b1a;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: var(--font-ui);
+}
+.prose-churrasco td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5ddd5;
+}
+.prose-churrasco tr:nth-child(even) td {
+  background: #fdf8f4;
+}
+.prose-churrasco hr {
+  border: none;
+  border-top: 2px solid #e5ddd5;
+  margin: 3rem 0;
+}
+.prose-churrasco code {
+  background: #f5ede5;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ── Ember Button ── */
+.btn-ember {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ff6b1a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-ember:hover {
+  background: #f04f0a;
+  transform: translateY(-1px);
+}
+
+/* ── Card hover ── */
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(26, 18, 8, 0.12);
+}
+
+/* ── AdSense placeholder ── */
+.adsense-container {
+  background: linear-gradient(135deg, #f5f0eb 0%, #ede5dc 100%);
+  border: 2px dashed #c9b8a4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  color: #8f7e6d;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #faf8f5; }
+::-webkit-scrollbar-thumb { background: #c9b8a4; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a49585; }
+
+/* ── Material Icons size adjustment ── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Smoke texture overlay ── */
+.smoke-bg {
+  position: relative;
+}
+.smoke-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
