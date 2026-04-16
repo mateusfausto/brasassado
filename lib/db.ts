@@ -144,7 +144,7 @@ export async function getAllCategorias(): Promise<string[]> {
   }
   const sql = getNeonDb()
   const rows = await sql`SELECT DISTINCT categoria FROM articles ORDER BY categoria`
-  return rows.map((r: { categoria: string }) => r.categoria)
+  return rows.map((r) => (r as { categoria: string }).categoria)
 }
 
 export async function searchArticles(query: string): Promise<Article[]> {
